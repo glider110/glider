@@ -1,0 +1,95 @@
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site
+title: glider blog
+subtitle: '专注机器人领域'
+description: this is hexo-demo #网栈描述
+keywords: pcl slam
+author: glider
+language: zh-CN #网站使用的语言
+timezone: Asia/Shanghai #网站时区
+
+# URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: https://glider110.gitee.io/glider #网址主页
+# root: /     #注释后会是http://localhost:4000/glider/ 多一个glider
+permalink: :year/:month/:day/:title/ #文章的 永久链接 格式
+permalink_defaults: #永久链接中各部分的默认值
+
+
+
+
+# Directory
+source_dir: source #资源文件夹，这个文件夹用来存放内容。
+public_dir: public #公共文件夹，这个文件夹用于存放生成的站点文件。
+tag_dir: tags #标签文件夹
+archive_dir: archives #归档文件夹
+category_dir: categories #分类文件夹
+code_dir: downloads/code #Include code 文件夹
+i18n_dir: :lang #国际化（i18n）文件夹
+skip_render: #跳过指定文件的渲染，您可使用 [glob 表达式](https://github.com/isaacs/node-glob)来匹配路径。
+
+# Writing
+new_post_name: :title.md #新文章的文件名称
+default_layout: post #预设布局
+# auto_spacing：true #在中文和英文之间加入空格
+titlecase: false #把标题转换为 title case
+external_link: true #在新标签中打开链接
+filename_case: 0 #把文件名称转换为 (1) 小写或 (2) 大写
+render_drafts: false #显示草稿
+# post_asset_folder: true #启动 [Asset 文件夹](https://hexo.io/zh-cn/docs/asset-folders.html)
+post_asset_folder: true
+postAsset: true
+
+marked:
+  prependRoot: true
+  postAsset: true
+relative_link: false #把链接改为与根目录的相对位址
+future: true #显示未来的文章
+highlight: #代码块的设置
+  enable: false
+  line_number: true
+  auto_detect: false
+  tab_replace:
+
+prismjs:
+  enable: true
+  preprocess: true
+  line_number: true
+  tab_replace: ''
+
+
+# Category & Tag
+default_category: ios #默认分类
+category_map: #分类别名
+tag_map: #标签别名
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD #日期格式
+time_format: HH:mm:ss  #时间格式
+
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 6 #每页显示的文章量 (0 = 关闭分页功能)
+pagination_dir: page #分页目录
+
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+theme: matery
+
+
+# Deployment
+## Docs: https://hexo.io/docs/one-command-deployment
+deploy:
+  type: git
+  # repo: git@e.coding.net:glider/glider/glider.git
+  # repo: https://gitee.com/glider110/glider110.gitee.io.git
+  # repo: git@github.com:glider110/glider10.github.io.git
+  repo: https://gitee.com/glider110/glider.git
+  branch: master
